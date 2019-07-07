@@ -4,7 +4,6 @@ import argparse
 def list_dir(the_dir):
     entries = os.listdir(the_dir)
     return filter(lambda x: x[0] not in ('.', '_'), entries)
-    # [x for x in entries if not x.startswith('.') or not x.startswith('_')]
 
 def read_files(the_dir):
     contents = {}
