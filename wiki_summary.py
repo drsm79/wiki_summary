@@ -11,7 +11,7 @@ def read_files(the_dir):
         path = os.path.join(the_dir, a_file)
         with open(path) as f:
             lines = list(filter(lambda x: x not in ('\n'), f.readlines()))
-            for skip in ['_**Note:', 'https://yout', '**_Note:']:
+            for skip in ['_**Note:', 'https://yout', '**_Note:', 'Home']:
                 if lines[0].startswith(skip):
                     lines.pop(0)
             contents[a_file.replace('.md', '')] = lines[0]
