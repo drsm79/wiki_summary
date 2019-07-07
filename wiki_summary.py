@@ -24,7 +24,7 @@ def main():
     args = parser.parse_args()
     file_contents = read_files(args.dir)
     for k in sorted(file_contents.keys()):
-        print(k, ':', file_contents[k])
+        print('**{}:** {}'.format(k, file_contents[k]))
 
 if __name__ == '__main__':
     main()
